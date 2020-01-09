@@ -20,9 +20,9 @@ public class AppConfig {
     @Bean
     public CommandLineRunner commandLineRunner(TaskRepository repository) {
         return args -> {
-            repository.save(new Task("Go market"));
-            repository.save(new Task("Do homework"));
-            repository.save(new Task("Clean room"));
+            repository.save(new Task("슈퍼마켓 가기", true));
+            repository.save(new Task("Do homework", false));
+            repository.save(new Task("Clean room ✨", false));
 
             repository.findAll()
                     .forEach(s -> log.info(s.toString()));

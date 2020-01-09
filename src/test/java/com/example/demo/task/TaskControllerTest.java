@@ -20,7 +20,8 @@ public class TaskControllerTest extends BaseControllerTest {
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].id").exists())
-                .andExpect(jsonPath("$[0].name").exists());
+                .andExpect(jsonPath("$[0].name").exists())
+                .andExpect(jsonPath("$[0].done").exists());
     }
 
     @Test

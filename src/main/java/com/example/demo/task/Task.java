@@ -16,8 +16,10 @@ public class Task {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+    private Boolean done;
 
-    public Task(String name) {
+    public Task(String name, Boolean done) {
         this.name = name;
+        this.done = done;
     }
 }
