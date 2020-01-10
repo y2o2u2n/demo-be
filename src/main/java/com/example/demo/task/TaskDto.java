@@ -6,8 +6,10 @@ import lombok.NoArgsConstructor;
 @Data @NoArgsConstructor
 class TaskDto {
     private String name;
+    private Boolean done;
 
-    TaskDto(String name) {
+    TaskDto(String name, Boolean done) {
         this.name = name;
+        this.done = done;
     }
 }
