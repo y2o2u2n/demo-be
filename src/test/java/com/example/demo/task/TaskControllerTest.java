@@ -34,7 +34,10 @@ public class TaskControllerTest extends BaseControllerTest {
                         .content(objectMapper.writeValueAsString(taskDto))
         )
                 .andDo(print())
-                .andExpect(status().isCreated());
+                .andExpect(status().isCreated())
+                .andExpect(jsonPath("$.id").exists())
+                .andExpect(jsonPath("$.name").exists())
+                .andExpect(jsonPath("$.done").exists());
     }
 
     @Test

@@ -16,7 +16,7 @@ public class Task {
     @Id @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    private Boolean done;
+    private Boolean done = Boolean.FALSE;
 
     public Task(String name, Boolean done) {
         this.name = name;

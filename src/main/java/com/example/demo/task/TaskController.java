@@ -21,9 +21,9 @@ public class TaskController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public void addTask(@RequestBody TaskDto taskDto) {
+    public Task addTask(@RequestBody TaskDto taskDto) {
         Task task = modelMapper.map(taskDto, Task.class);
-        taskRepository.save(task);
+        return taskRepository.save(task);
     }
 
     @DeleteMapping("/{id}")
