@@ -42,7 +42,7 @@ public class AppConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry
                         .addMapping("/api/v1/**")
-                        .allowedOrigins("http://localhost:5000")
+                        .allowedOrigins("*")
                         .allowedMethods(
                                 HttpMethod.GET.name(),
                                 HttpMethod.POST.name(),
